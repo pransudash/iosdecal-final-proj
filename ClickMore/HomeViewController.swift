@@ -36,17 +36,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImagesCollectionCell
-        let imgurl = Images.imageArray[indexPath.row]
-        if (imgurl != nil) {
-            cell.img.image = UIImage(named: imgurl!)
+        let img = Images.imageArray[indexPath.row]
+        if (img != nil) {
+            cell.img.image = img
         }
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let imgurl = Images.imageArray[indexPath.row]
-        if (imgurl != nil) {
-            selectedImage = UIImage(named: imgurl!)!
+        let img = Images.imageArray[indexPath.row]
+        if (img != nil) {
+            selectedImage = img
         }
         performSegue(withIdentifier: "editImage", sender: self)
     }

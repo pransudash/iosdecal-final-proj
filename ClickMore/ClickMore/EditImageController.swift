@@ -61,7 +61,13 @@ class EditImageController: UIViewController, UICollectionViewDelegate, UICollect
     @IBAction func savePressed(_ sender: Any) {
         var newImage: FilteredImage = FilteredImage(img: image, filter: label)
         Images.addFilteredImage(image: newImage)
-        _ = navigationController?.popViewController(animated: true)
+        if let _ = navigationController?.popViewController(animated: true) {
+            
+        } else {
+            performSegue(withIdentifier: "backToHome", sender: self)
+        }
+        
+        
     }
 
     /*

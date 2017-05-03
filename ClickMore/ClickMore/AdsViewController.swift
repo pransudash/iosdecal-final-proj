@@ -10,6 +10,7 @@ import UIKit
 
 class AdsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collection: UICollectionView!
+    var selectedAd: FilteredImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,14 @@ class AdsViewController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedAd = Images.adsArray[indexPath.row]
+        performSegue(withIdentifier: "viewAd", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? ViewAdController {
+            dest.ad = selectedAd
+        }
     }
 
 }

@@ -17,6 +17,7 @@
 		16359E731EB94FF50030592D /* AdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16359E721EB94FF50030592D /* AdsViewController.swift */; };
 		16359E771EB953870030592D /* FilteredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16359E761EB953870030592D /* FilteredImage.swift */; };
 		16359E791EB957050030592D /* AdCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16359E781EB957050030592D /* AdCellController.swift */; };
+		16359E7B1EB97FCF0030592D /* ViewAdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16359E7A1EB97FCF0030592D /* ViewAdController.swift */; };
 		168E0B0B1EB5BE0700A5982A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168E0B0A1EB5BE0700A5982A /* AppDelegate.swift */; };
 		168E0B101EB5BE0800A5982A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 168E0B0E1EB5BE0800A5982A /* Main.storyboard */; };
 		168E0B121EB5BE0800A5982A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 168E0B111EB5BE0800A5982A /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		16359E721EB94FF50030592D /* AdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsViewController.swift; sourceTree = "<group>"; };
 		16359E761EB953870030592D /* FilteredImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilteredImage.swift; path = ../FilteredImage.swift; sourceTree = "<group>"; };
 		16359E781EB957050030592D /* AdCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdCellController.swift; sourceTree = "<group>"; };
+		16359E7A1EB97FCF0030592D /* ViewAdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAdController.swift; sourceTree = "<group>"; };
 		168E0B071EB5BE0700A5982A /* ClickMore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickMore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		168E0B0A1EB5BE0700A5982A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		168E0B0F1EB5BE0800A5982A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				16359E6A1EB93F2D0030592D /* FilterCellController.swift */,
 				16359E721EB94FF50030592D /* AdsViewController.swift */,
 				16359E781EB957050030592D /* AdCellController.swift */,
+				16359E7A1EB97FCF0030592D /* ViewAdController.swift */,
 				16359E441EB9330F0030592D /* CameraViewController.swift */,
 				168E0B0E1EB5BE0800A5982A /* Main.storyboard */,
 				168E0B111EB5BE0800A5982A /* Assets.xcassets */,
@@ -172,6 +175,7 @@
 				168E0B0B1EB5BE0700A5982A /* AppDelegate.swift in Sources */,
 				16359E6F1EB945CD0030592D /* Filters.swift in Sources */,
 				16359E731EB94FF50030592D /* AdsViewController.swift in Sources */,
+				16359E7B1EB97FCF0030592D /* ViewAdController.swift in Sources */,
 				16359E771EB953870030592D /* FilteredImage.swift in Sources */,
 				16359E6B1EB93F2D0030592D /* FilterCellController.swift in Sources */,
 			);

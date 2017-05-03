@@ -143,6 +143,7 @@
                         <outlet property="collection" destination="4MY-O7-B45" id="kAA-eQ-z3G"/>
                         <outlet property="img" destination="Em2-EO-2nF" id="h4f-cK-XNM"/>
                         <outlet property="label" destination="UWR-PR-89b" id="HNc-j0-Ia8"/>
+                        <segue destination="SqG-je-xDg" kind="show" identifier="backToHome" id="TEP-zT-1yQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npK-9U-CGR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,15 +190,28 @@
                                 <rect key="frame" x="110" y="517" width="154" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="takePhoto"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="ocX-JY-RXS" eventType="touchUpInside" id="qr5-sv-JBf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyk-Ob-0HS">
+                                <rect key="frame" x="275" y="510" width="115" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="editPhoto"/>
+                                <connections>
+                                    <action selector="sendPicture:" destination="ocX-JY-RXS" eventType="touchUpInside" id="Jsm-Wd-Ne1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Camera" image="cameraIcon" selectedImage="cameraIcon.png" id="0KV-UA-sD3"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="cameraIcon" selectedImage="cameraIcon" id="0KV-UA-sD3"/>
                     <navigationItem key="navigationItem" id="318-bj-fTf"/>
                     <connections>
                         <outlet property="imageViewOverlay" destination="PkP-Cn-EOD" id="5vj-Ob-5o4"/>
-                        <outlet property="takePhotoButton" destination="0Fn-qF-DVw" id="WlB-lB-MmP"/>
+                        <outlet property="sendImageButton" destination="Wyk-Ob-0HS" id="DkZ-8A-KcN"/>
+                        <outlet property="takePhotoButton" destination="0Fn-qF-DVw" id="gd6-1I-UqE"/>
+                        <segue destination="ikx-Vu-eVK" kind="show" identifier="imageTaken" id="Smv-N0-J7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0d-Wa-isK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,11 +291,49 @@
                     <navigationItem key="navigationItem" title="Ads Created" id="piM-bR-I6p"/>
                     <connections>
                         <outlet property="collection" destination="Ut1-fv-csh" id="Pa4-9C-IWJ"/>
+                        <segue destination="cZf-gw-qmq" kind="show" identifier="viewAd" id="d9V-Ad-5dM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDz-6c-EFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="701.60000000000002" y="1180.6596701649175"/>
+        </scene>
+        <!--View Ad Controller-->
+        <scene sceneID="des-jh-TSe">
+            <objects>
+                <viewController id="cZf-gw-qmq" customClass="ViewAdController" customModule="ClickMore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tsD-Kb-ezd"/>
+                        <viewControllerLayoutGuide type="bottom" id="zdb-vn-pPZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PZq-ML-mgp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfT-Ih-wg9">
+                                <rect key="frame" x="0.0" y="167" width="375" height="332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3W-6h-r6h">
+                                <rect key="frame" x="0.0" y="425" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17611452129999999" green="0.79807066459999998" blue="0.88623299870000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.17611452129999999" green="0.79807066459999998" blue="0.88623299870000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="NfT-Ih-wg9" id="Wqp-pG-ITs"/>
+                        <outlet property="label" destination="i3W-6h-r6h" id="hMC-aS-Hgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMb-E9-5hk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="1181"/>
         </scene>
         <!--Home-->
         <scene sceneID="5sg-7Z-fND">
@@ -304,8 +356,11 @@
     <resources>
         <image name="adsIcon" width="48" height="48"/>
         <image name="cameraIcon" width="48" height="48"/>
-        <image name="cameraIcon.png" width="48" height="48"/>
+        <image name="editPhoto" width="128" height="128"/>
         <image name="homeIcon" width="48" height="48"/>
         <image name="takePhoto" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Smv-N0-J7I"/>
+    </inferredMetricsTieBreakers>
 </document>
